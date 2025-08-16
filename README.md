@@ -17,5 +17,5 @@ It includes practice code, small exercises, and notes as I explore concepts from
 
 ---
 
-## 📂 Repo Structure
+
 
