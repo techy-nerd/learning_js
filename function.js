@@ -55,3 +55,12 @@ function returnSecondVal(myArray){
 }
 console.log(returnSecondVal(arr))
 console.log(returnSecondVal([1,2,2,3,3]))
+
+
+// we can write the function execution statement before funct declaration only if the function is not written in variable
+// ans(2,3)--show error
+const ans=function(a,b){
+    console.log(a+b)
+}
+ans(2,3)
+
