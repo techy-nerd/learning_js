@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<style>
+    body{
+background-color: antiquewhite;
+font-size:xx-large;
+    }
+    
+</style>
+<body  >
+    <div id="parent">
+        <ul>
+            <li id="dog">dog</li>
+            <li>cat</li>
+            <li>banana</li>
+            <li>mouse</li>
+            <a  id="google" target="_blank" style="font-size: medium;"  href="https://www.google.com/search?q=google&rlz=1C1ONGR_enIN1105IN1105&oq=goo&gs_lcrp=EgZjaHJvbWUqDQgAEAAYgwEYsQMYgAQyDQgAEAAYgwEYsQMYgAQyDQgBEAAYgwEYsQMYgAQyDQgCEAAYgwEYsQMYgAQyBggDEEUYOTIQCAQQABiDARixAxiABBiKBTIGCAUQRRhBMgYIBhBFGEEyBggHEEUYQdIBCDEzNDFqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8">for other anninal search</a>
+        </ul>
+    </div>
+</body>
+<script>
+// document.getElementById('dog').onclick=function(){
+//     alert('Hey.You clicked on the dog!')}
+
+//+++++ learning about event listeners++++++++-we have three parameter where false is last and is optional mostly
+// in event propagation-if false we will face bubbling i.e down to top
+// nut if true-we call it capturing ,execution occur from top to bottom
+document.getElementById('dog').addEventListener('click',function(e){
+    console.log(e)
+    alert('hey you clicked on dog!')
+    
+},false)
+
+// we can prevent  default behaviour by putting e.preventdefault
+
+
+</script>
+</html>

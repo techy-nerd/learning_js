@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>learning js</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <p id="para"></p>
+</body>
+<script>
+//    learning setInterval-used to set the task for specific period of time
+
+
+    const printDate=function(str){
+        // new way of printing date-datenow()
+        console.log(str,Date.now())
+    }
+    let StartMe
+    document.getElementById('start').addEventListener('click',function(){
+        StartMe=setInterval(printDate,1000,"hii")
+        document.getElementById('para').innerHTML='Started printing!'
+    })
+    
+    document.getElementById('stop').addEventListener('click',function(){
+        clearTimeout(StartMe)
+        document.getElementById('para').innerHTML='Stopped printing!'
+    })
+</script>
+</html>

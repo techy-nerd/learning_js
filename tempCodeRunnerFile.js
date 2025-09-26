@@ -1,1 +1,1 @@
-user.welcome()
+console.log(values);

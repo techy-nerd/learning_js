@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h4>'Start' should start changing the bg colour, click 'Stop' to stop it</h4>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const colourChanger=function(){
+        const hex='0123456789ABCDEF'
+        let color='#'
+        for(let i=0;i<6;i++){
+            color+=hex[Math.floor(Math.random()*16)]
+        }
+        return color;
+    }
+
+    const setbg=function(){
+        
+        document.querySelector('body').style.backgroundColor=colourChanger()
+        
+    }
+   
+    let initiate;
+    document.getElementById('start').addEventListener('click',function(){
+        if(!initiate){
+            initiate=setInterval(setbg,1000)
+        }
+        
+    })
+    document.getElementById('stop').addEventListener('click',function(){
+        clearInterval(initiate)
+         initiate = null  
+        console.log('stopped changing!')
+    })
+    
+</script>
+</html>

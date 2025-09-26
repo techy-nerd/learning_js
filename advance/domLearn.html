@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning dom</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .bg-black{
+            background-color: beige;
+        }
+        ul{
+            color:palevioletred;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 class="heading" id="title">dom learning class with chai aur code</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta necessitatibus nobis excepturi! Ipsa laboriosam quaerat impedit animi. A, autem id libero corporis minus non aperiam?</p>
+    </div>
+    <div>
+         <ul class="list"><li>one</li>
+    <li>two</li>
+    <li>three</li></ul>
+    </div>
+   
+    <!-- add new class via dom -->
+     <!-- document.getElementById('title').setAttribute('class','test') -->
+      <!-- title.style.backgroundColor='red' -->
+       <!-- textContent
+
+Returns all text inside an element, including hidden elements (like those with display: none or visibility: hidden). -->
+
+<!-- innerText
+
+Returns only the visible text, ignoring hidden elements. -->
+
+<!-- document.querySelector('h1') -->
+
+<!-- - converet nodelist to array-here temp is nodelist -->
+ <!-- Array.from('temp') -->
+</body>
+</html>

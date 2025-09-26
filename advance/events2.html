@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>learning js</h1>
+    <button>Stop</button>
+</body>
+<script>
+    // setimeout uses handler-i.e function without name & also time
+    setTimeout(function(){
+        console.log('ayushi')
+    },2000)
+
+    // or++++++++++++++++
+    const say=function(){
+        console.log('ayushi is here again')
+    }
+    setTimeout(say,2000)
+// different implementation++++++++++++++++++++
+    const changeHeader=function ()
+{
+    document.querySelector('h1').innerHTML='chai aur code'
+}    
+    const changeMe=setTimeout(changeHeader,1000)
+    // To stop the settimeout -we use cleartimeout
+    document.querySelector('button').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log('stopped')
+    })
+</script>
+</html>
