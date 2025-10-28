@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    document.getElementById('orange').addEventListener('click',clickHandler('orange')
+    )
+    document.getElementById('green')
+    .addEventListener('click', clickHandler('green'));
+
+// you want to prevent the automatic execution of function basically so we do this via closure where the inner function will acess the parent function variables and preventing the automatic execution
+    function clickHandler(color){
+         return function(){
+            document.body.style.backgroundColor=`${color}`
+        }
+        
+    }
+
+    // document.body.addEventListener('click',(e)=>{
+    //     if(e.target.tagName=='BUTTON'){
+    //         document.body.style.backgroundColor=e.target.id
+    //     }
+    // })
+</script>
+</html>
